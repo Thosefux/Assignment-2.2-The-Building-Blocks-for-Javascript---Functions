@@ -1,133 +1,64 @@
+<!-- Guy Scamp -->
+<!-- Document Type Tag -->
 <!DOCTYPE html>
-
 <!-- HTML Open Tag -->
  <html>
     <!-- Head Open Tag -->
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content
-            ="width=device-width, initial-scale=1.0">
+        <!-- Title Tag -->
         <title>Dice Game</title>
-        <!-- Style Open Tag -->
-        <style>
-            .container {
-                width: 70%;
-                margin: auto;
-                text-align: center;
-            }
-
-            .dice {
-                text-align: center;
-                display: inline-block;
-                margin: 10px;
-            }
-
-            body {
-                background-color: #044b0d;
-                margin: 0;
-            }
-
-            h1 {
-                margin: 30px;
-                font-family: "Courier", cursive;
-                text-shadow: 5px 0 #232931;
-                font-size: 4.5rem;
-                color: #4ecca3;
-                text-align: center;
-            }
-
-            p {
-                font-size: 2rem;
-                color: #4ecca3;
-                font-family: "Courier", cursive;
-            }
-
-            img {
-                width: 100%;
-            }
-
-            .bottom {
-                padding-top: 30px;
-            }
-
-            .butn {
-                background: #c04056;
-                font-family: "Courier", cursive;
-                border-radius: 7px;
-                color: #5ed65a;
-                font-size: 30px;
-                padding: 16px 25px 16px 25px;
-                text-decoration: none;
-            }
-
-            .butn:hover {
-                background: #df669e;
-                text-decoration: none;
-            }
-        </style>
-        <!-- Head Close Tag -->
+        <!-- CSS Link Tag-->
+        <link rel="stylesheet" href="main.css">
+    <!-- Head Close Tag -->
     </head>
     <!-- Body Open Tag -->
     <body>
         <!-- Our Container for the dice elements -->
-        <!-- This is a Division Open Tag -->
         <div class="container">
             <!-- Header Tag -->
             <h1>Dice War!</h1>
             <!-- Player 1s dice element -->
-            <!-- Division Open Tag -->
             <div class="dice">
                 <!-- Class Element for Player 1 -->
                 <p class="Player1">Player 1</p>
                 <!-- Image Element for Player 1s dice -->
                 <img class="img1" src="dice6.png">
-                <!-- Division Close Tag -->
             </div>
-            <!-- Division Open Tag -->
+            <!-- Player 2s dice element -->
             <div class="dice">
+                <!-- Class Element for Player 2 -->
                 <p class="Player2">Player 2</p>
+                <!-- Image Element for Player 2s dice -->
                 <img class="img2" src="dice6.png">
-                <!-- Division Close Tag -->
             </div>
-            <!-- Division Close Tag -->
         </div>
-        <!-- Division Open Tag -->
+        <!-- Our Roll Dice Button Container -->
         <div class="container bottom">
-            <button type="button" class="butn"
-                    onClick="rollTheDice()">
-                Roll the Dice
-            </button>
-            <!-- Division Close Tag -->
+            <!-- Our roll button element -->
+            <button type="button" class="butn" onClick="rollTheDice()"> Roll the Dice </button>
         </div>
-        <!-- Division Open Tag -->
+        <!-- Our Edit Names Button Container -->
         <div class="container bottom">
-            <button type="button" class="butn"
-                    onClick="editNames()">
-                Edit Names
-            </button>
-        <!-- Division Close Tag -->
+            <button type="button" class="butn" onClick="editNames()"> Edit Names  </button>
         </div>
-
+        <!-- This is Internal JavaScript -->
         <script>
-
-            //This is Inline JavaScript
-            // Player name
+            // Variables for our Player Names
             var player1 = "Player 1";
             var player2 = "Player 2";
-
             // Function to change the player name
             function editNames() {
-
+                // Prompt message displayed when edit names is pressed
                 player1 = prompt("Change Player1 name");
                 player2 = prompt("Change player2 name");
-
-                document.querySelector("p.Player1").innerHTML = player1;
+                // We grab our player name elements and then set them to the new name inputs
+                document.querySelector("p.Player1").innerHTML = player1;             
                 document.querySelector("p.Player2").innerHTML = player2;
             }
         </script>
         <!-- This is External JavaScript -->
         <script src="code.js" type="text/javascript"></script>
-        <!-- Body Close Tag -->
+    <!-- Body Close Tag -->
     </body>
-
+<!-- HTML Close Tag -->
 </html>
